@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+
       <script type = "text/javascript" src = "hello.js"></script>
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,8 +18,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js  Copy"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0-rc.1/Chart.js"></script>
+
 
   <style id="compiled-css" type="text/css">
 
@@ -115,15 +117,15 @@
   </style>
 
   <script type="text/javascript">
-    $(function () {
-    $(window).on('scroll', function () {
-        if ( $(window).scrollTop() > 0 ) {
-            $('.navbar').addClass('active');
-        } else {
-            $('.navbar').removeClass('active');
-        }
-    });
-});
+      $(function () {
+      $(window).on('scroll', function () {
+          if ( $(window).scrollTop() > 0 ) {
+              $('.navbar').addClass('active');
+          } else {
+              $('.navbar').removeClass('active');
+          }
+          });
+      });
 
   </script>
 
@@ -131,38 +133,31 @@
    </head>
 	
    <body style="background: url('bg.jpg');">
-<header class="header">
-    <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">SANTIZ</a>
-            <button style="hover:color: black" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="bot navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-            
-            <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                </ul>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">SANTIZ</a>
+                <button style="hover:color: black" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="bot navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
+    <br>
+    <br>
 
-
-<br>
-<br>
-
-<hr style="width: 75%;color: white;background: white">
-  <div class="py-5 container">
-  
-  
+    <hr style="width: 75%;color: white;background: white">
+      <div class="py-5 container">  
          	<div style="margin: auto" class="col-sm-12 col-12 py-3 containe" >
             <canvas  width="100%" height="100%" id="myChart"></canvas>
             <h2 style="color: white;margin-left: 90px;">Central Tank</h2>
           </div> 
-
-         
-
-            <div  class="row">
+           <div  class="row">
 
               <div class="py-5 contain col-lg-4 col-md-6 col-sm-6 col-12" >
                 <canvas style="max-width: 350px;max-height: 350px;" width="100%" height="100%" id="myChart1"></canvas>
@@ -191,100 +186,83 @@
               </div>
             </div>
 
-        
-
-
-
     </div>
 
 
    	<script type="text/javascript">
 
-      	  var firebaseConfig = {
-		    apiKey: "AIzaSyDBnsdMF6JpwNEpZDLz9lPHJCmY6D3GRvk",
-		    authDomain: "tank-55920.firebaseapp.com",
-		    databaseURL: "https://tank-55920.firebaseio.com",
-		    projectId: "tank-55920",
-		    storageBucket: "tank-55920.appspot.com",
-		    messagingSenderId: "1018073419237",
-		    appId: "1:1018073419237:web:d63d738f1aa24c7c6bb30c",
-		    measurementId: "G-9MB553109X"
-		  };
-		  // Initialize Firebase
-		  firebase.initializeApp(firebaseConfig);
-      	
-     
-      	var ref1 = firebase.database().ref('tank01/');
-      	var ref2 = firebase.database().ref('tank02/');
-      	var ref3 = firebase.database().ref('tank03/');
-      	var ref4 = firebase.database().ref('tank04/');
-      	var ref5 = firebase.database().ref('tank05/');
-      	var refc = firebase.database().ref('Central_tank/');
+      var firebaseConfig = {
+        apiKey: "AIzaSyDBnsdMF6JpwNEpZDLz9lPHJCmY6D3GRvk",
+        authDomain: "tank-55920.firebaseapp.com",
+        databaseURL: "https://tank-55920.firebaseio.com",
+        projectId: "tank-55920",
+        storageBucket: "tank-55920.appspot.com",
+        messagingSenderId: "1018073419237",
+        appId: "1:1018073419237:web:d63d738f1aa24c7c6bb30c",
+        measurementId: "G-9MB553109X"
+      };
 
+      firebase.initializeApp(firebaseConfig);
+      
+        var centraltank;
+        var tank1;
+        var tank2;
+        var tank3;
+        var tank4;
+        var tank5;
 
-      	var centraltank;
-      	var tank1;
-      	var tank2;
-      	var tank3;
-      	var tank4;
-      	var tank5;
-
+        var ref1 = firebase.database().ref('tank01/');
+        var ref2 = firebase.database().ref('tank02/');
+        var ref3 = firebase.database().ref('tank03/');
+        var ref4 = firebase.database().ref('tank04/');
+        var ref5 = firebase.database().ref('tank05/');
+        var refc = firebase.database().ref('Central_tank/');
 
       	function setvalues(callback){
 
-		
-		ref2.on("value", function(snapshot) {
+           ref1.on("value", function(snapshot) {
 
-			tank2 = snapshot.val()['value'];
+            tank1 = snapshot.val()['level'];
 
-		}); 
-		ref3.on("value", function(snapshot) {
+          }); 
 
-			tank3 = snapshot.val()['value'];
+      		ref2.on("value", function(snapshot) {
 
-		}); 
-		ref4.on("value", function(snapshot) {
+      			tank2 = snapshot.val()['level'];
 
-			tank4 = snapshot.val()['value'];
+      		}); 
+      		ref3.on("value", function(snapshot) {
 
-		}); 
-		ref5.on("value", function(snapshot) {
+      			tank3 = snapshot.val()['level'];
 
-			tank5 = snapshot.val()['value'];
+      		}); 
+      		ref4.on("value", function(snapshot) {
 
-		}); 
+      			tank4 = snapshot.val()['level'];
 
-    refc.on("value", function(snapshot) {
+      		}); 
+      		ref5.on("value", function(snapshot) {
 
-      centraltank = snapshot.val()['value'];
+      			tank5 = snapshot.val()['level'];
 
+      		}); 
 
-    }); 
+          refc.on("value", function(snapshot) {
 
-    ref1.on("value", function(snapshot) {
+            centraltank = snapshot.val()['level'];
+            callback();
 
-      tank1 = snapshot.val()['value'];
+          }); 
 
-      callback();
-
-    }); 
-
-
-		
-
-		}
-
-		setvalues(function(data){
-
-			chart();
+		    }
 
 
-		});
+      setvalues(function(data){
 
+        chart();
+
+      });
 
       </script>
-
-
-
    </body>
 </html>
